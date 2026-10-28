@@ -1,0 +1,26 @@
+---
+title: "GitHub Advanced"
+author: "Kami Rice"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  labs(
+    title = "Highway Fuel Economy by Engine Displacement",
+    x = "Engine displacement (liters)",
+    y = "Highway miles per gallon",
+    color = "Vehicle class"
+  ) +
+  theme_minimal()
+```
